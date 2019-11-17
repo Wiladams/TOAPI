@@ -1,0 +1,86 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D8DFBACA-4EE2-454D-A6C3-765DAD8DF408}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>TOAPI.User32</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\build\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>TOAPI.User32</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DISPLAY_DEVICE.cs" />
+    <Compile Include="ICONINFO.cs" />
+    <Compile Include="MONITORINFO.cs" />
+    <Compile Include="MSHOOKSTRUCT.cs" />
+    <Compile Include="rawhid.cs" />
+    <Compile Include="RAWINPUT.cs" />
+    <Compile Include="RAWINPUTDEVICE.cs" />
+    <Compile Include="RAWINPUTDEVICELIST.cs" />
+    <Compile Include="RAWINPUTHEADER.cs" />
+    <Compile Include="RAWKEYBOARD.cs" />
+    <Compile Include="RAWMOUSE.cs" />
+    <Compile Include="RID_DEVICE_INFO.cs" />
+    <Compile Include="RID_DEVICE_INFO_HID.cs" />
+    <Compile Include="RID_DEVICE_INFO_KEYBOARD.cs" />
+    <Compile Include="RID_DEVICE_INFO_MOUSE.cs" />
+    <Compile Include="User32Constants.cs" />
+    <Compile Include="User32Enums.cs" />
+    <Compile Include="User32Methods.cs" />
+    <Compile Include="User32_Clipboard.cs" />
+    <Compile Include="User32_Desktop.cs" />
+    <Compile Include="User32_Drawing.cs" />
+    <Compile Include="User32_IO.cs" />
+    <Compile Include="User32_Message.cs" />
+    <Compile Include="User32_Monitor.cs" />
+    <Compile Include="User32_UserObject.cs" />
+    <Compile Include="User32_Window.cs" />
+    <Compile Include="User32_WindowStation.cs" />
+    <Compile Include="USEROBJECTFLAGS.cs" />
+    <Compile Include="WNDCLASS.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TOAPI.Kernel32\TOAPI.Kernel32.csproj">
+      <Project>{d6fd80f7-c20b-4a12-ae40-95744cdafd19}</Project>
+      <Name>TOAPI.Kernel32</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TOAPI.Types\TOAPI.Types.csproj">
+      <Project>{7fabafa5-0808-4a9a-9390-b784fe45794e}</Project>
+      <Name>TOAPI.Types</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>

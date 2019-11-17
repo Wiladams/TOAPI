@@ -60,7 +60,7 @@ namespace TOAPI.Setup
     public struct SP_DEVINFO_DATA
     {
         internal Int32 cbSize;
-        internal System.Guid ClassGuid;
+        internal Guid ClassGuid;
         internal Int32 DevInst;
         internal Int32 Reserved;
     }

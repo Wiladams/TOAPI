@@ -15,7 +15,7 @@ namespace TOAPI.Types
         #region Operators
         public static implicit operator IntPtr(UnmanagedPointer aPtr)
         {
-            return (obj == null) ? IntPtr.Zero : saPtr.m_ptr;
+            return (aPtr == null) ? IntPtr.Zero : aPtr.m_ptr;
         }
 
         public static UnmanagedPointer operator +(UnmanagedPointer aPtr, int size)

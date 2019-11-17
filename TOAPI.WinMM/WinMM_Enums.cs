@@ -1,6 +1,8 @@
-﻿namespace TOAPI.WinMM
+﻿using System;
+
+namespace TOAPI.WinMM
 {
-    using System;
+
 
     /// <summary>
     /// Specifies capabilities of a waveOut device.

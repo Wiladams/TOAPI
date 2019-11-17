@@ -1,9 +1,9 @@
-﻿
+﻿using System;
+using System.Runtime.InteropServices;
+
 namespace TOAPI.HID
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Runtime.InteropServices;
+
 
     using Microsoft.Win32.SafeHandles;
     

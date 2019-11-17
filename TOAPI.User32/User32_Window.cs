@@ -3,45 +3,13 @@ using System.Text;  // For StringBuilder
 using System.Runtime.InteropServices;
 
 using TOAPI.Types;
-using TOAPI.Kernel32;
+
 
 namespace TOAPI.User32
 {
     #region Type aliases
 
-    using HWND = System.IntPtr;
-    using HINSTANCE = System.IntPtr;
-    using HMENU = System.IntPtr;
-    using HICON = System.IntPtr;
-    using HBRUSH = System.IntPtr;
-    using HCURSOR = System.IntPtr;
-
-    using LRESULT = System.IntPtr;
-    using LPVOID = System.IntPtr;
     using LPCTSTR = System.String;
-
-    using WPARAM = System.IntPtr;
-    using LPARAM = System.IntPtr;
-    using HANDLE = System.IntPtr;
-    using HRAWINPUT = System.IntPtr;
-
-    using BYTE = System.Byte;
-    using SHORT = System.Int16;
-    using USHORT = System.UInt16;
-    using LONG = System.Int32;
-    using ULONG = System.UInt32;
-    using WORD = System.Int16;
-    using DWORD = System.Int32;
-    using BOOL = System.Boolean;
-    using INT = System.Int32;
-    using UINT = System.UInt32;
-    using LONG_PTR = System.IntPtr;
-    using ATOM = System.Int32;
-
-    using COLORREF = System.Int32;
-    using WNDPROC = System.IntPtr;
-
-    using HRESULT = System.IntPtr;
 
     #endregion
 

@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Runtime.InteropServices;
-using TOAPI.Types;
+
 
 using BOOL = System.Int32;
 using UINT = System.UInt32;
 using UUID = System.UInt32;
 using DWORD = System.Int32;
+//using SIZE = System.Int32;
+using SIZE = TOAPI.Types.SIZE;
 
 namespace TOAPI.DwmApi
 {
@@ -79,7 +81,7 @@ namespace TOAPI.DwmApi
 
         //133   10 00002F85 DwmQueryThumbnailSourceSize
         [DllImport("dwmapi.dll", EntryPoint = "DwmQueryThumbnailSourceSize")]
-        public static extern int DwmQueryThumbnailSourceSize(IntPtr hThumbnail, ref Size pSize);
+        public static extern int DwmQueryThumbnailSourceSize(IntPtr hThumbnail, ref SIZE pSize);
 
         //134   11 0000192C DwmRegisterThumbnail
         [DllImport("dwmapi.dll", EntryPoint = "DwmRegisterThumbnail")]

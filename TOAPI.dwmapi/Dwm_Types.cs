@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Runtime.InteropServices;
 
 using DWM_FRAME_COUNT = System.UInt64;
 using QPC_TIME = System.UInt64;
@@ -16,6 +16,7 @@ using TOAPI.Types;
 
 namespace TOAPI.DwmApi
 {
+    [StructLayout(LayoutKind.Sequential)]
     public struct MARGINS 
     {
         int cxLeftWidth;
@@ -24,6 +25,7 @@ namespace TOAPI.DwmApi
         int cyBottomHeight;
     } ;
 
+    [StructLayout(LayoutKind.Sequential)]
     public struct MIL_MATRIX3X2D 
     {
         DOUBLE   _11, _12;
@@ -32,6 +34,7 @@ namespace TOAPI.DwmApi
         DOUBLE   DY;
     } ;
 
+    [StructLayout(LayoutKind.Sequential)]
     public struct DWM_BLURBEHIND
     {
         DWORD dwFlags;
@@ -43,11 +46,11 @@ namespace TOAPI.DwmApi
 
 
 
-// Thumbnails
-//typedef HANDLE HTHUMBNAIL;
-//typedef HTHUMBNAIL* PHTHUMBNAIL;
+    // Thumbnails
+    //typedef HANDLE HTHUMBNAIL;
+    //typedef HTHUMBNAIL* PHTHUMBNAIL;
 
-
+    [StructLayout(LayoutKind.Sequential)]
     public struct DWM_THUMBNAIL_PROPERTIES
     {
         DWORD dwFlags;
@@ -59,12 +62,14 @@ namespace TOAPI.DwmApi
     };
 
     // Video enabling apis
+    [StructLayout(LayoutKind.Sequential)]
     public struct UNSIGNED_RATIO
     {
         UINT32 uiNumerator;
         UINT32 uiDenominator;
     };
 
+    [StructLayout(LayoutKind.Sequential)]
     public  struct DWM_TIMING_INFO
     {
         UINT32          cbSize;
@@ -238,6 +243,7 @@ namespace TOAPI.DwmApi
     } ;
 
 
+    [StructLayout(LayoutKind.Sequential)]
     public struct DWM_PRESENT_PARAMETERS
     {
         UINT32          cbSize;

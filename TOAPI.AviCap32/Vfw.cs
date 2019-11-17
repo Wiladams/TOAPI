@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
+﻿
 using TOAPI.Types;
 
 namespace TOAPI.AviCap32
